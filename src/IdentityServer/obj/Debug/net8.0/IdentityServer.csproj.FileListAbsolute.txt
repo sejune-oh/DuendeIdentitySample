@@ -45,3 +45,7 @@ D:\project\dotnet\Identity_Sample\src\IdentityServer\obj\Debug\net8.0\refint\Ide
 D:\project\dotnet\Identity_Sample\src\IdentityServer\obj\Debug\net8.0\IdentityServer.pdb
 D:\project\dotnet\Identity_Sample\src\IdentityServer\obj\Debug\net8.0\IdentityServer.genruntimeconfig.cache
 D:\project\dotnet\Identity_Sample\src\IdentityServer\obj\Debug\net8.0\ref\IdentityServer.dll
+D:\project\dotnet\Identity_Sample\src\IdentityServer\obj\Debug\net8.0\IdentityServer.RazorAssemblyInfo.cache
+D:\project\dotnet\Identity_Sample\src\IdentityServer\obj\Debug\net8.0\IdentityServer.RazorAssemblyInfo.cs
+D:\project\dotnet\Identity_Sample\src\IdentityServer\bin\Debug\net8.0\keys\is-signing-key-09C731AB57D2ACC60B5D1088E8979BB7.json
+D:\project\dotnet\Identity_Sample\src\IdentityServer\bin\Debug\net8.0\IdentityServer.staticwebassets.runtime.json
