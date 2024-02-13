@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WD5LvBawLbfF3XnJP9TQ8p7d08A5wlc8KUCHedDFOis=",
+  "Hash": "hNcOjcI7aHUl7CTYKty4rdNg/rLBz/Wr1aXt7fuoJbQ=",
   "Source": "IdentityServer",
   "BasePath": "_content/IdentityServer",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "IdentityServer\\wwwroot",
       "Source": "IdentityServer",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\css\\site.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\css\\site.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\css\\site.min.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\css\\site.min.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "css/site.min.css",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.min.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\css\\site.scss",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\css\\site.scss",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "css/site.scss",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.scss"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\duende-logo.svg",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\duende-logo.svg",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "duende-logo.svg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\duende-logo.svg"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\favicon.ico",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\favicon.ico",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\js\\signin-redirect.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\js\\signin-redirect.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "js/signin-redirect.js",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\js\\signin-redirect.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\js\\signout-redirect.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\js\\signout-redirect.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "js/signout-redirect.js",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\js\\signout-redirect.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\README.md",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap\\README.md",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap/README.md",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\README.md"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\css\\bootstrap-glyphicons.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\css\\bootstrap-glyphicons.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/css/bootstrap-glyphicons.css",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\css\\bootstrap-glyphicons.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\css\\bootstrap-glyphicons.min.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\css\\bootstrap-glyphicons.min.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/css/bootstrap-glyphicons.min.css",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\css\\bootstrap-glyphicons.min.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.eot",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.eot",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/fonts/glyphicons/glyphicons-halflings-regular.eot",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.eot"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.svg",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.svg",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/fonts/glyphicons/glyphicons-halflings-regular.svg",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.svg"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.ttf",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.ttf",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/fonts/glyphicons/glyphicons-halflings-regular.ttf",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.ttf"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.woff",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.woff",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/fonts/glyphicons/glyphicons-halflings-regular.woff",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.woff"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.woff2",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.woff2",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/fonts/glyphicons/glyphicons-halflings-regular.woff2",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\fonts\\glyphicons\\glyphicons-halflings-regular.woff2"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\LICENSE",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\LICENSE",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/LICENSE",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\LICENSE"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/maps/glyphicons-fontawesome.css",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.less",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.less",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/maps/glyphicons-fontawesome.less",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.less"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.min.css",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.min.css",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/bootstrap4-glyphicons/maps/glyphicons-fontawesome.min.css",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap4-glyphicons\\maps\\glyphicons-fontawesome.min.css"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/jquery/dist/jquery.slim.js",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.slim.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/jquery/dist/jquery.slim.min.js",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/jquery/dist/jquery.slim.min.map",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\README.md",
+      "Identity": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\lib\\jquery\\README.md",
       "SourceId": "IdentityServer",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\wwwroot\\",
+      "ContentRoot": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\wwwroot\\",
       "BasePath": "_content/IdentityServer",
       "RelativePath": "lib/jquery/README.md",
       "AssetKind": "All",

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\IdentityServer.csproj": {}
+    "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\IdentityServer.csproj": {}
   },
   "projects": {
-    "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\IdentityServer.csproj": {
+    "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\IdentityServer.csproj",
+        "projectUniqueName": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\IdentityServer.csproj",
         "projectName": "IdentityServer",
-        "projectPath": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\IdentityServer.csproj",
-        "packagesPath": "C:\\Users\\세준\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\dotnet\\Identity_Sample\\src\\IdentityServer\\obj\\",
+        "projectPath": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\IdentityServer.csproj",
+        "packagesPath": "C:\\Users\\CloudHospital\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\세준\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CloudHospital\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,9 +40,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Duende.IdentityServer": {
+            "Duende.IdentityServer.EntityFramework": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

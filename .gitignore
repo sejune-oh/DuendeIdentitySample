@@ -402,3 +402,6 @@ FodyWeavers.xsd
 /obj
 /debug
 /bin
+
+obj/
+bin/
