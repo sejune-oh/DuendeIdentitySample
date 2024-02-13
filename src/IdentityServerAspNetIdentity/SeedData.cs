@@ -1,7 +1,6 @@
 ﻿using System.Security.Claims;
 using IdentityModel;
 using IdentityServerAspNetIdentity.Data;
-using IdentityServerAspNetIdentity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -27,7 +26,9 @@ public class SeedData
                     UserName = "alice",
                     Email = "AliceSmith@email.com",
                     EmailConfirmed = true,
-                    FavoriteColor= "red"
+                    FavoriteColor= "red",
+                    MobileNumber = "8201027911866"
+                   
                 };
                 var result = userMgr.CreateAsync(alice, "Pass123$").Result;
                 if (!result.Succeeded)
@@ -59,7 +60,9 @@ public class SeedData
                 {
                     UserName = "bob",
                     Email = "BobSmith@email.com",
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+                    FavoriteColor = "blue",
+                    MobileNumber = "8201027911866"
                 };
                 var result = userMgr.CreateAsync(bob, "Pass123$").Result;
                 if (!result.Succeeded)
