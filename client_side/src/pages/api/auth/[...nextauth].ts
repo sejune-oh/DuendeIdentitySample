@@ -1,92 +1,25 @@
 import { IDENTIY_ISSUER } from "@/constants";
-import auths from "@/services/auth";
-import { NextApiRequest, NextApiResponse } from "next";
-import NextAuth, { NextAuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
+import NextAuth, { AuthOptions } from "next-auth";
+import DuendeIDS6Provider from "next-auth/providers/duende-identity-server6";
 
 const auth_url = IDENTIY_ISSUER;
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-export function nextAuthOption(request: NextApiRequest): NextAuthOptions {
-  console.log("CALL nextAuthOption");
-  return {
-    providers: [
-      CredentialsProvider({
-        id: "SignWithROPC",
-        name: "SignWithROPC",
-        credentials: {
-          username: {
-            label: "Email",
-            type: "text",
-            placeholder: "name@email.com",
-          },
-          password: { label: "Password", type: "password" },
-        },
-        authorize: async function (
-          credentials: Record<"username" | "password", string> | undefined
-        ) {
-          console.log("🚀 ~ nextAuthOption ~ credentials:", credentials);
-          // req로 받은 데이터에서값 가져오기
-          if (credentials) {
-            const userSignIn: { email: string; password: string } = {
-              email: credentials.username,
-              password: credentials.password,
-            };
-
-            try {
-              const identityToken = await auths.signInROPC(userSignIn);
-              console.log(
-                "🚀 ~ nextAuthOption ~ identityToken:",
-                identityToken
-              );
-
-              return null;
-            } catch (error: any) {
-              throw new error();
-            }
-          }
-          throw new Error("Function not implemented.");
-        },
-      }),
-    ],
-  };
-}
-
-export const options: NextAuthOptions = {
+export const authOptions: AuthOptions = {
   providers: [
-    CredentialsProvider({
-      id: "SignWithROPC",
-      name: "SignWithROPC",
-      credentials: {
-        username: {
-          label: "Email",
-          type: "text",
-          placeholder: "name@email.com",
+    DuendeIDS6Provider({
+      authorization: {
+        params: {
+          scope: "openid profile mobile verification",
+          //redirect_uri: "http://localhost:3000/signin-oidc",
+          redirect_uri: "http://localhost:3000",
         },
-        password: { label: "Password", type: "password" },
       },
-      authorize: async function (
-        credentials: Record<"username" | "password", string> | undefined
-      ) {
-        // req로 받은 데이터에서값 가져오기
-        if (credentials) {
-          const userSignIn: { email: string; password: string } = {
-            email: credentials.username,
-            password: credentials.password,
-          };
-
-          try {
-            const identityToken = await auths.signInROPC(userSignIn);
-            console.log("🚀 ~ nextAuthOption ~ identityToken:", identityToken);
-
-            return null;
-          } catch (error: any) {
-            throw new error();
-          }
-        }
-        throw new Error("Function not implemented.");
-      },
+      clientId: "webClient",
+      clientSecret: "clientSecret",
+      issuer: "https://localhost:5001",
     }),
   ],
 };
 
-export default NextAuth(options);
+export default NextAuth(authOptions);

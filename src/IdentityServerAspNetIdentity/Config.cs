@@ -96,7 +96,7 @@ public static class Config
                 ClientId = "webClient",
                 ClientSecrets = {new Secret("clientSecret".Sha256())},
                 AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = {"http://localhost:3000/signin-oidc" },
+                RedirectUris = {"http://localhost:3000/signin-oidc", "http://localhost:3000"},
                 PostLogoutRedirectUris = {"http://localhost:3000/signed_out"},
                 AllowOfflineAccess = true,
                 AllowedScopes = {

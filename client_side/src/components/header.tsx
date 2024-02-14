@@ -1,42 +1,22 @@
 import { CLIENT_ID, DefaultMenu, SCOPE } from "@/constants";
 import { Context } from "@/context/contextProvider";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
 
 interface Params {}
 
-// const client_id = CLIENT_ID;
-// const scope = SCOPE;
-
-const client_id = "webClient";
-const scope = "openid profile api mobile offline";
-const return_url = "http://localhost:3000";
-
 function Header({}: Params): React.ReactNode {
   const router = useRouter();
   const { data: session } = useSession();
   const { setCurrentMenu } = useContext(Context);
 
-  //#region Temporary data
-  const url = `https://localhost:5001/account/login?client_id=${client_id}&scope=${scope}&return_uri=${return_url}`;
-  //#endregion Temporary data
-
-  //! function
-
   const onClickBtnHandler = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
-    //window
-    // window.open(
-    //   url,
-    //   "IdentityLogin",
-    //   "width=500, height=600  scrollbar=yes resizable=no top=400 left=500"
-    // );
-
-    router.push(url);
+    signIn();
   };
 
   //! useEffect
