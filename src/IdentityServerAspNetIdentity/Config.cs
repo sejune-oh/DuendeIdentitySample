@@ -89,7 +89,24 @@ public static class Config
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
                     "api"
-                }   
+                }
+            }, 
+            new Client
+            {
+                ClientId = "webClient",
+                ClientSecrets = {new Secret("clientSecret".Sha256())},
+                AllowedGrantTypes = GrantTypes.Code,
+                RedirectUris = {"http://localhost:3000/signin-oidc" },
+                PostLogoutRedirectUris = {"http://localhost:3000/signed_out"},
+                AllowOfflineAccess = true,
+                AllowedScopes = {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "api",
+                    "mobile",
+                    "verification"
+                }
+
             }
         };
 }

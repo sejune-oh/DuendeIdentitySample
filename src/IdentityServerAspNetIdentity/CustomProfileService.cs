@@ -1,5 +1,6 @@
 ﻿using Duende.IdentityServer.AspNetIdentity;
 using Duende.IdentityServer.Models;
+using IdentityServerAspNetIdentity.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 

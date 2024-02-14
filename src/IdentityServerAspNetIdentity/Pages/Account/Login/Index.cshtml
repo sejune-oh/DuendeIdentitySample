@@ -1,9 +1,5 @@
-@page ""
-@model IdentityServerAspNetIdentity.Pages.Login.Index
-
-@{
-   var query = Request.Query.ToString();
-}
+@page
+@model IdentityServer.Pages.Login.Index
 
 <div class="login-page">
     <div class="lead">
@@ -22,24 +18,18 @@
                     <div class="card-header">
                         <h2>Local Account</h2>
                     </div>
-                   
+
                     <div class="card-body">
                         <form asp-page="/Account/Login/Index">
                             <input type="hidden" asp-for="Input.ReturnUrl" />
-                             <div>
-                                <input type="hidden" asp-for="QueryClientId" value="@Request.Query["client_id"]" />
-                                <input type="hidden" asp-for="QueryScope" value="@Request.Query["scope"]" />
-                                <input type="hidden" asp-for="QueryReturnUri" value="@Request.Query["return_uri"]" />
-                             </div>
-                           
+
                             <div class="form-group">
                                 <label asp-for="Input.Username"></label>
-                                <input class="form-control" placeholder="Username" asp-for="Input.Username" value="bob" autofocus>
+                                <input class="form-control" placeholder="Username" asp-for="Input.Username" autofocus>
                             </div>
                             <div class="form-group">
                                 <label asp-for="Input.Password"></label>
-                                <input type="password" class="form-control" placeholder="Password" asp-for="Input.Password" value="Pass123$"
-                                    autocomplete="off">
+                                <input type="password" class="form-control" placeholder="Password" asp-for="Input.Password" autocomplete="off">
                             </div>
 
                             @if (Model.View.AllowRememberLogin)
@@ -53,6 +43,7 @@
                                     </div>
                                 </div>
                             }
+
 
                             <button class="btn btn-primary" name="Input.Button" value="login">Login</button>
                             <button class="btn btn-secondary" name="Input.Button" value="cancel">Cancel</button>
@@ -74,9 +65,10 @@
                             @foreach (var provider in Model.View.VisibleExternalProviders)
                             {
                                 <li class="list-inline-item">
-                                    <a class="btn btn-secondary" asp-page="/ExternalLogin/Challenge"
-                                        asp-route-scheme="@provider.AuthenticationScheme"
-                                        asp-route-returnUrl="@Model.Input.ReturnUrl">
+                                    <a class="btn btn-secondary"
+                                       asp-page="/ExternalLogin/Challenge"
+                                       asp-route-scheme="@provider.AuthenticationScheme"
+                                       asp-route-returnUrl="@Model.Input.ReturnUrl">
                                         @provider.DisplayName
                                     </a>
                                 </li>

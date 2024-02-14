@@ -35,7 +35,7 @@ builder.Services
 
 var app = builder.Build();
 
-if(app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
@@ -46,11 +46,10 @@ app.UseRouting();
 app.UseBff();
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints => {
+app.UseEndpoints(endpoints =>
+{
     endpoints.MapBffManagementEndpoints();
 });
 
-
-//app.MapGet("/", () => "Hello World!");
 
 app.Run();

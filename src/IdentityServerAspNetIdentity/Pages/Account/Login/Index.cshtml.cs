@@ -1,30 +1,31 @@
 // Copyright (c) Duende Software. All rights reserved.
 // See LICENSE in the project root for license information.
 
-using System.Net.NetworkInformation;
-using System.Runtime.Intrinsics.Arm;
-using System.Xml.Schema;
 using Duende.IdentityServer;
 using Duende.IdentityServer.Events;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
-using IdentityServerAspNetIdentity.Models;
+using Duende.IdentityServer.Test;
+using IdentityServerAspNetIdentity.Pages.Login;
+using IdentityServerAspNetIdentity.Pages;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using IdentityServerAspNetIdentity.Models;
 
-namespace IdentityServerAspNetIdentity.Pages.Login;
+namespace IdentityServer.Pages.Login;
 
 [SecurityHeaders]
 [AllowAnonymous]
 public class Index : PageModel
 {
+    private readonly TestUserStore _users;
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly SignInManager<ApplicationUser> _signInManager;
+
     private readonly IIdentityServerInteractionService _interaction;
     private readonly IEventService _events;
     private readonly IAuthenticationSchemeProvider _schemeProvider;
@@ -35,51 +36,31 @@ public class Index : PageModel
     [BindProperty]
     public InputModel Input { get; set; } = default!;
 
-    [BindProperty]
-    public string QueryClientId { get; set; }
-    
-    [BindProperty]
-    public string QueryScope { get; set; }
-    
-    [BindProperty]
-    public string  QueryReturnUri { get; set; }
-
-   
-
-
     public Index(
         IIdentityServerInteractionService interaction,
         IAuthenticationSchemeProvider schemeProvider,
         IIdentityProviderStore identityProviderStore,
-        IEventService events,
+
         UserManager<ApplicationUser> userManager,
-        SignInManager<ApplicationUser> signInManager
+        SignInManager<ApplicationUser> signInManager,
+        IEventService events,
+        TestUserStore? users = null
         )
     {
-        _userManager = userManager;
-        _signInManager = signInManager;
+        // this is where you would plug in your own custom identity management library (e.g. ASP.NET Identity)
+        //_users = users ?? throw new InvalidOperationException("Please call 'AddTestUsers(TestUsers.Users)' on the IIdentityServerBuilder in Startup or remove the TestUserStore from the AccountController.");
+
         _interaction = interaction;
         _schemeProvider = schemeProvider;
         _identityProviderStore = identityProviderStore;
         _events = events;
-
+        _userManager = userManager;
+        _signInManager = signInManager;
     }
 
     public async Task<IActionResult> OnGet(string? returnUrl)
     {
-
-        var returnUri = Request.Query["return_uri"];
-
-        if (string.IsNullOrEmpty(returnUrl) && !string.IsNullOrEmpty(returnUri))
-        {
-            await BuildModelAsync(returnUri);
-        }
-        else
-        {
-            await BuildModelAsync(returnUrl);
-        }
-
-
+        await BuildModelAsync(returnUrl);
 
         if (View.IsExternalLoginOnly)
         {
@@ -93,7 +74,7 @@ public class Index : PageModel
     public async Task<IActionResult> OnPost()
     {
         // check if we are in the context of an authorization request
-        var context = await _interaction.GetAuthorizationContextAsync(Input.ReturnUrl);
+        var context = await _interaction.GetAuthorizationContextAsync("http://localhost:3000/signin-oidc");
 
         // the user clicked the "cancel" button
         if (Input.Button != "login")
@@ -128,13 +109,15 @@ public class Index : PageModel
         if (ModelState.IsValid)
         {
             var result = await _signInManager.PasswordSignInAsync(Input.Username!, Input.Password!, Input.RememberLogin, lockoutOnFailure: true);
+
             if (result.Succeeded)
             {
                 //var user = await _userManager.FindByNameAsync(Input.Username!);
                 var user = await _userManager.FindByNameAsync(Input.Username!);
-                await _events.RaiseAsync(new UserLoginSuccessEvent(user!.UserName, user.Id, user.UserName, clientId: context?.Client.ClientId));
-                Telemetry.Metrics.UserLogin(context?.Client.ClientId, IdentityServerConstants.LocalIdentityProvider);
+                await _events.RaiseAsync(new UserLoginSuccessEvent(user.UserName, user.Id, user.UserName, clientId: context?.Client.ClientId));
 
+                // only set explicit expiration here if user chooses "remember me". 
+                // otherwise we rely upon expiration configured in cookie middleware.
                 var props = new AuthenticationProperties();
                 if (LoginOptions.AllowRememberLogin && Input.RememberLogin)
                 {
@@ -161,15 +144,14 @@ public class Index : PageModel
                         // return the response is for better UX for the end user.
                         return this.LoadingPage(Input.ReturnUrl);
                     }
-                    // we can trust model.ReturnUrl since GetAuthorizationContextAsync returned non-null
 
+                    // we can trust model.ReturnUrl since GetAuthorizationContextAsync returned non-null
                     return Redirect(Input.ReturnUrl ?? "~/");
                 }
 
                 // request for a local page
                 if (Url.IsLocalUrl(Input.ReturnUrl))
                 {
-                    // 수정부분
                     return Redirect(Input.ReturnUrl);
                 }
                 else if (string.IsNullOrEmpty(Input.ReturnUrl))
@@ -178,13 +160,14 @@ public class Index : PageModel
                 }
                 else
                 {
+                    // user might have clicked on a malicious link - should be logged
                     throw new ArgumentException("invalid return URL");
                 }
             }
 
             const string error = "invalid credentials";
             await _events.RaiseAsync(new UserLoginFailureEvent(Input.Username, error, clientId: context?.Client.ClientId));
-            Telemetry.Metrics.UserLoginFailure(context?.Client.ClientId, IdentityServerConstants.LocalIdentityProvider, error);
+            //Telemetry.Metrics.UserLoginFailure(context?.Client.ClientId, IdentityServerConstants.LocalIdentityProvider, error);
             ModelState.AddModelError(string.Empty, LoginOptions.InvalidCredentialsErrorMessage);
         }
 
