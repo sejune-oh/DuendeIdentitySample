@@ -1,6 +1,7 @@
 // Copyright (c) Duende Software. All rights reserved.
 // See LICENSE in the project root for license information.
 
+using System.Net.NetworkInformation;
 using System.Runtime.Intrinsics.Arm;
 using System.Xml.Schema;
 using Duende.IdentityServer;
@@ -14,6 +15,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
 
 namespace IdentityServerAspNetIdentity.Pages.Login;
 
@@ -33,8 +35,17 @@ public class Index : PageModel
     [BindProperty]
     public InputModel Input { get; set; } = default!;
 
-    public string RedirectUrl { get; set; } = "";
-    public string Scope { get; set; } = "";
+    [BindProperty]
+    public string QueryClientId { get; set; }
+    
+    [BindProperty]
+    public string QueryScope { get; set; }
+    
+    [BindProperty]
+    public string  QueryReturnUri { get; set; }
+
+   
+
 
     public Index(
         IIdentityServerInteractionService interaction,
@@ -42,7 +53,8 @@ public class Index : PageModel
         IIdentityProviderStore identityProviderStore,
         IEventService events,
         UserManager<ApplicationUser> userManager,
-        SignInManager<ApplicationUser> signInManager)
+        SignInManager<ApplicationUser> signInManager
+        )
     {
         _userManager = userManager;
         _signInManager = signInManager;
@@ -55,11 +67,17 @@ public class Index : PageModel
 
     public async Task<IActionResult> OnGet(string? returnUrl)
     {
-        await BuildModelAsync(returnUrl);
 
-        RedirectUrl = $"{Request.Query["redirect_url"]}";
-        Scope = $"{Request.Query["scope"]}";
+        var returnUri = Request.Query["return_uri"];
 
+        if (string.IsNullOrEmpty(returnUrl) && !string.IsNullOrEmpty(returnUri))
+        {
+            await BuildModelAsync(returnUri);
+        }
+        else
+        {
+            await BuildModelAsync(returnUrl);
+        }
 
 
 
@@ -112,9 +130,25 @@ public class Index : PageModel
             var result = await _signInManager.PasswordSignInAsync(Input.Username!, Input.Password!, Input.RememberLogin, lockoutOnFailure: true);
             if (result.Succeeded)
             {
+                //var user = await _userManager.FindByNameAsync(Input.Username!);
                 var user = await _userManager.FindByNameAsync(Input.Username!);
                 await _events.RaiseAsync(new UserLoginSuccessEvent(user!.UserName, user.Id, user.UserName, clientId: context?.Client.ClientId));
                 Telemetry.Metrics.UserLogin(context?.Client.ClientId, IdentityServerConstants.LocalIdentityProvider);
+
+                var props = new AuthenticationProperties();
+                if (LoginOptions.AllowRememberLogin && Input.RememberLogin)
+                {
+                    props.IsPersistent = true;
+                    props.ExpiresUtc = DateTimeOffset.UtcNow.Add(LoginOptions.RememberMeLoginDuration);
+                };
+
+                // issue authentication cookie with subject ID and username
+                var isuser = new IdentityServerUser(user.Id)
+                {
+                    DisplayName = user.UserName
+                };
+
+                await HttpContext.SignInAsync(isuser, props);
 
                 if (context != null)
                 {
@@ -144,7 +178,6 @@ public class Index : PageModel
                 }
                 else
                 {
-                    // user might have clicked on a malicious link - should be logged
                     throw new ArgumentException("invalid return URL");
                 }
             }
