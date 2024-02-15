@@ -1,6 +1,6 @@
-import { CLIENT_ID, DefaultMenu, SCOPE } from "@/constants";
+import { DefaultMenu } from "@/constants";
 import { Context } from "@/context/contextProvider";
-import { signIn, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
@@ -16,7 +16,11 @@ function Header({}: Params): React.ReactNode {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
-    signIn();
+    if (!session) {
+      signIn();
+    } else {
+      signOut();
+    }
   };
 
   //! useEffect
@@ -44,16 +48,14 @@ function Header({}: Params): React.ReactNode {
             </li>
           ))}
       </ul>
-      {!session && (
-        <div>
-          <button
-            className="btn bg-blue-500 text-white text-sm font-semibold"
-            onClick={onClickBtnHandler}
-          >
-            {!session ? "Sign-In" : "Sign-Out"}
-          </button>
-        </div>
-      )}
+      <div>
+        <button
+          className="btn bg-blue-500 text-white text-sm font-semibold"
+          onClick={onClickBtnHandler}
+        >
+          {!session ? "Sign-In" : "Sign-Out"}
+        </button>
+      </div>
     </div>
   );
 }

@@ -95,16 +95,19 @@ public static class Config
             {
                 ClientId = "webClient",
                 ClientSecrets = {new Secret("clientSecret".Sha256())},
-                AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris = {"http://localhost:3000/signin-oidc", "http://localhost:3000"},
+                AllowedGrantTypes = new [] { GrantType.AuthorizationCode, GrantType.ResourceOwnerPassword },
+                RedirectUris = {"http://localhost:3000/api/auth/callback/cloudHospital"},
+                RequireConsent= false,
                 PostLogoutRedirectUris = {"http://localhost:3000/signed_out"},
                 AllowOfflineAccess = true,
+                AllowAccessTokensViaBrowser= true,
+                EnableLocalLogin= true,
+                AllowedCorsOrigins = new []{"http://localhost:3000"},
                 AllowedScopes = {
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
                     "api",
-                    "mobile",
-                    "verification"
+                    "mobile"
                 }
 
             }
