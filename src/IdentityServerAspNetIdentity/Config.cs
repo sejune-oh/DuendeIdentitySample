@@ -94,11 +94,12 @@ public static class Config
             new Client
             {
                 ClientId = "webClient",
+                ClientName ="nextjsWebClient",
                 ClientSecrets = {new Secret("clientSecret".Sha256())},
                 AllowedGrantTypes = new [] { GrantType.AuthorizationCode, GrantType.ResourceOwnerPassword },
                 RedirectUris = {"http://localhost:3000/api/auth/callback/cloudHospital"},
                 RequireConsent= false,
-                PostLogoutRedirectUris = {"http://localhost:3000/signed_out"},
+                PostLogoutRedirectUris = {"http://localhost:3000/signed-out"},
                 AllowOfflineAccess = true,
                 AllowAccessTokensViaBrowser= true,
                 EnableLocalLogin= true,

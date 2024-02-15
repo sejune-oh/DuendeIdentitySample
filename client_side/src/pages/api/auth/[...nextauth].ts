@@ -1,5 +1,5 @@
-import { CLIENT_SECRET } from "@/constants";
-import NextAuth, { AuthOptions, Session, User } from "next-auth";
+import { Session } from "@/types/next-auth";
+import NextAuth, { User } from "next-auth";
 import { JWT } from "next-auth/jwt";
 import DuendeIDS6Provider from "next-auth/providers/duende-identity-server6";
 
@@ -40,7 +40,7 @@ export default NextAuth({
             params,
             checks
           );
-          console.log("🚀 ~ request ~ tokens:", tokens);
+
           return { tokens };
         },
       },
@@ -64,25 +64,28 @@ export default NextAuth({
   },
   callbacks: {
     async signIn({ user }: { user: User }) {
-      console.log("🚀 ~ signIn ~ user:", user);
       return user ? true : false;
     },
     async jwt({ token, account }) {
-      console.log("🚀 ~ jwt ~ token:", token);
-      console.log("Next Auth callback token");
       if (account) {
         token.accessToken = account.access_token;
+        if (account.id_token) token.idToken = account.id_token;
       }
       return token;
     },
     async session({ session, token, user }) {
-      console.log("🚀 ~ session ~ token:", token);
-      return session;
+      const clientSession: Session = {
+        ...session,
+      };
+
+      if (token.idToken) {
+        clientSession.id_token = token.idToken as string;
+      }
+
+      return clientSession;
     },
     async redirect({ url, baseUrl }) {
-      console.log("url: ", url);
       if (url.startsWith(baseUrl)) return url;
-      // Allows relative callback URLs
       else if (url.startsWith("/")) return new URL(url, baseUrl).toString();
       return baseUrl;
     },
@@ -93,71 +96,3 @@ export default NextAuth({
     },
   },
 });
-// export const authOptions: AuthOptions = {
-//   providers: [
-//     DuendeIDS6Provider({
-//       authorization: {
-//         params: {
-//           scope: process.env.IDENTITY_SCOPE,
-//           redirect_uri: process.env.IDENTITY_REDIRECTURL,
-//         },
-//       },
-//       clientId: process.env.CLIENT_ID!,
-//       clientSecret: process.env.CLIENT_SECRET!,
-//       issuer: process.env.IDENTITY_ISSUER,
-//       userinfo: {
-//         url: `${issuer}/connect/userinfo`,
-//       },
-//       profileUrl: `${issuer}/connect/userinfo`,
-//       async profile(profile, token) {
-//         console.log("🚀 ~ profile ~ profile:", profile);
-//         return {
-//           id: profile.sub,
-//           role: profile.role,
-//           preferred_username: profile.preferred_username,
-//           name: profile.name,
-//           email: profile.email,
-//           email_verified: profile.email_verified,
-//         };
-//       },
-//       token: {
-//         async request({ client, provider, params, checks }) {
-//           console.log("🚀 ~ request ~ client:", client);
-//           const tokens = await client.callback(
-//             provider.callbackUrl,
-//             params,
-//             checks
-//           );
-//           return { tokens };
-//         },
-//       },
-//     }),
-//   ],
-//   secret: process.env.CLIENT_SECRET,
-//   callbacks: {
-//     async signIn({ user }) {
-//       console.log("🚀 ~ signIn ~ user:", user);
-//       return user ? true : false;
-//     },
-//     async jwt({ token, account }) {
-//       console.log("🚀 ~ jwt ~ token:", token);
-//       console.log("Next Auth callback token");
-//       if (account) {
-//         token.accessToken = account.access_token;
-//       }
-//       return token;
-//     },
-//     async session({ session, token, user }) {
-//       console.log("🚀 ~ session ~ token:", token);
-//       return session;
-//     },
-
-//     async redirect({ url, baseUrl }) {
-//       if (url.startsWith(baseUrl)) return url;
-//       else if (url.startsWith("/")) return new URL(url, baseUrl).toString();
-//       return baseUrl;
-//     },
-//   },
-// };
-
-//export default NextAuth(authOptions);

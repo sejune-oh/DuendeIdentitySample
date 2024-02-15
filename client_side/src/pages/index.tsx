@@ -18,7 +18,7 @@ export default function Home() {
         Main Page
         {session ? (
           <>
-            <div>Exist Session {`${session.user?.email}`}</div>
+            <div>Exist Session {`${session.user?.name}`}</div>
           </>
         ) : (
           <>

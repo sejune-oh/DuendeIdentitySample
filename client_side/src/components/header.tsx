@@ -1,9 +1,11 @@
 import { DefaultMenu } from "@/constants";
 import { Context } from "@/context/contextProvider";
+import { Session } from "@/types/next-auth";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
+import { json } from "stream/consumers";
 
 interface Params {}
 
@@ -12,14 +14,31 @@ function Header({}: Params): React.ReactNode {
   const { data: session } = useSession();
   const { setCurrentMenu } = useContext(Context);
 
-  const onClickBtnHandler = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    if (!session) {
-      signIn();
-    } else {
-      signOut();
+  const customSession = session as Session;
+  const id_token = customSession?.id_token ?? null;
+
+  console.log("id_token", id_token);
+
+  const singedOutBtnHandler = async () => {
+    try {
+      const res = await fetch("/api/auth/faderated-logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id_token }),
+      });
+
+      if (res.ok) {
+        router.push("/");
+
+        signOut({ redirect: false });
+        console.log("Logout Success");
+      } else {
+        console.log("Logout Error");
+      }
+    } catch (error) {
+      console.log("[Error] logout", error);
     }
   };
 
@@ -49,12 +68,21 @@ function Header({}: Params): React.ReactNode {
           ))}
       </ul>
       <div>
-        <button
-          className="btn bg-blue-500 text-white text-sm font-semibold"
-          onClick={onClickBtnHandler}
-        >
-          {!session ? "Sign-In" : "Sign-Out"}
-        </button>
+        {session ? (
+          <button
+            className="btn bg-blue-500 text-white text-sm font-semibold"
+            onClick={singedOutBtnHandler}
+          >
+            Sign out
+          </button>
+        ) : (
+          <button
+            className="btn bg-blue-500 text-white text-sm font-semibold"
+            onClick={() => signIn()}
+          >
+            Sign In
+          </button>
+        )}
       </div>
     </div>
   );

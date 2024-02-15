@@ -1,4 +1,5 @@
 using Duende.IdentityServer;
+using Duende.IdentityServer.Services;
 using IdentityServerAspNetIdentity.Data;
 using IdentityServerAspNetIdentity.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -57,6 +58,24 @@ internal static class HostingExtensions
                options.Cookie.SameSite = SameSiteMode.Lax;
            });
 
+        //cors
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowSpecificOrigin", builder => builder
+            .WithOrigins("http://localhost:3000")
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+        });
+
+        /*builder.Services.AddSingleton<ICorsPolicyService>(container =>
+        {
+            var logger = container.GetRequiredService<ILogger<DefaultCorsPolicyService>>();
+            return new DefaultCorsPolicyService(logger)
+            {
+                AllowedOrigins = { "http://localhost:3000" }
+            };
+        });*/
+
 
         return builder.Build();
     }
@@ -72,8 +91,10 @@ internal static class HostingExtensions
 
         app.UseStaticFiles();
         app.UseRouting();
+        app.UseCors("AllowSpecificOrigin");
         app.UseIdentityServer();
         app.UseAuthorization();
+        
       
         app.MapRazorPages()
             .RequireAuthorization();

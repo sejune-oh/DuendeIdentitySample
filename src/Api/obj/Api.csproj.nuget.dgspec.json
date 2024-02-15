@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\Api\\Api.csproj": {}
+    "D:\\project\\dotnet\\DuendeIdentitySample\\src\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\Api\\Api.csproj": {
+    "D:\\project\\dotnet\\DuendeIdentitySample\\src\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\Api\\Api.csproj",
+        "projectUniqueName": "D:\\project\\dotnet\\DuendeIdentitySample\\src\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\Api\\Api.csproj",
-        "packagesPath": "C:\\Users\\CloudHospital\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\dotnet\\DuendeIdentitySample\\src\\Api\\obj\\",
+        "projectPath": "D:\\project\\dotnet\\DuendeIdentitySample\\src\\Api\\Api.csproj",
+        "packagesPath": "C:\\Users\\세준\\.nuget\\packages\\",
+        "outputPath": "D:\\project\\dotnet\\DuendeIdentitySample\\src\\Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\CloudHospital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\세준\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.pkg.github.com/icloudhospital/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
