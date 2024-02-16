@@ -5,7 +5,6 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
-import { json } from "stream/consumers";
 
 interface Params {}
 
@@ -16,8 +15,6 @@ function Header({}: Params): React.ReactNode {
 
   const customSession = session as Session;
   const id_token = customSession?.id_token ?? null;
-
-  console.log("id_token", id_token);
 
   const singedOutBtnHandler = async () => {
     try {
@@ -30,10 +27,16 @@ function Header({}: Params): React.ReactNode {
       });
 
       if (res.ok) {
-        router.push("/");
+        const { logoutUrl } = await res.json();
 
+        if (logoutUrl) {
+          window.location.href = logoutUrl;
+        }
+
+        // router.push("/");
+
+        // signOut({ redirect: false, callbackUrl: "/" });
         signOut({ redirect: false });
-        console.log("Logout Success");
       } else {
         console.log("Logout Error");
       }
@@ -78,7 +81,7 @@ function Header({}: Params): React.ReactNode {
         ) : (
           <button
             className="btn bg-blue-500 text-white text-sm font-semibold"
-            onClick={() => signIn()}
+            onClick={() => signIn("cloudHospital")}
           >
             Sign In
           </button>

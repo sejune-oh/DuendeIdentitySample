@@ -74,7 +74,7 @@ public class Index : PageModel
     public async Task<IActionResult> OnPost()
     {
         // check if we are in the context of an authorization request
-        var context = await _interaction.GetAuthorizationContextAsync("http://localhost:3000/signin-oidc");
+        var context = await _interaction.GetAuthorizationContextAsync("http://localhost:3000/api/auth/callback/cloudHospital");
 
         // the user clicked the "cancel" button
         if (Input.Button != "login")

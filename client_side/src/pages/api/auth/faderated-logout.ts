@@ -22,7 +22,6 @@ export default async function federatedLogout(
     }
 
     if (id_token) {
-      console.log("clear 2");
       const endsessionURL = `${process.env.IDENTITY_ISSUER}/connect/endsession`;
       const endsessionParams = new URLSearchParams("");
 
@@ -32,15 +31,13 @@ export default async function federatedLogout(
         `${process.env.NEXTAUTH_URL}/signed-out`
       );
 
-      res.setHeader(
-        "Set-Cookie",
-        "next-auth.session-token=deleted; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT"
-      );
+      console.log("url", `${endsessionURL}?${endsessionParams}`);
 
-      res.setHeader("Content-Type", "application/x-www-form-urlencoded");
+      // return res.redirect(`${endsessionURL}?${endsessionParams}`);
 
-      return res.redirect(`${endsessionURL}?${endsessionParams}`);
-      // return res.json({ logoutUrl: `${endsessionURL}?${endsessionParams}` });
+      return res
+        .status(200)
+        .json({ logoutUrl: `${endsessionURL}?${endsessionParams}` });
     } else {
       console.warn(
         "Without an id_token the user won't be redirected back from the IdP after logout."
