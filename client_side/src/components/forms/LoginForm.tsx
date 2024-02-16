@@ -89,13 +89,13 @@ function LoginForms({}: Params): React.ReactNode {
         Continue
       </button>
       <div className="flex justify-center items-center">
-        <p className="text-[#BFBFBF] text-sm">
+        <div className="text-[#BFBFBF] text-sm">
           Don't have an account?{" "}
           <Link className="text-black font-semibold" href={"/"}>
             Sign Up
           </Link>{" "}
           now.
-        </p>
+        </div>
       </div>
     </form>
   );
