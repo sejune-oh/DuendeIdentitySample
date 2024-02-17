@@ -398,11 +398,15 @@ FodyWeavers.xsd
 *.sln.iml
 
 
-#
-/obj
-/debug
-/bin
-
+#Identity server
 obj/
 bin/
-src/Api/obj
+debug/
+src/Api/obj/
+src/Api/bin/
+src/Api/
+
+
+# Nextjs
+client_side/.next/
+
