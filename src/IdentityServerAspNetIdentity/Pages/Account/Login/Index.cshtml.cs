@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Identity;
 using IdentityServerAspNetIdentity.Models;
+using Microsoft.Extensions.Primitives;
 
 namespace IdentityServer.Pages.Login;
 
@@ -71,12 +72,13 @@ public class Index : PageModel
         return Page();
     }
 
-    public async Task<IActionResult> OnPost()
+    public async Task<IActionResult> OnPost(string? returnUrl, string scheme)
     {
         // check if we are in the context of an authorization request
         var context = await _interaction.GetAuthorizationContextAsync("http://localhost:3000/api/auth/callback/cloudHospital");
 
-        // the user clicked the "cancel" button
+
+
         if (Input.Button != "login")
         {
             if (context != null)
@@ -174,6 +176,7 @@ public class Index : PageModel
         // something went wrong, show form with error
         await BuildModelAsync(Input.ReturnUrl);
         return Page();
+
     }
 
     private async Task BuildModelAsync(string? returnUrl)
@@ -239,7 +242,9 @@ public class Index : PageModel
         {
             AllowRememberLogin = LoginOptions.AllowRememberLogin,
             EnableLocalLogin = allowLocal && LoginOptions.AllowLocalLogin,
-            ExternalProviders = providers.ToArray()
+            ExternalProviders = providers.ToArray(),
+                       
         };
     }
+
 }

@@ -22,7 +22,7 @@ public class LoggedOut : PageModel
     {
         _interactionService = interactionService;
     }
-
+     
     public async Task<IActionResult> OnGet(string? logoutId)
     {
 

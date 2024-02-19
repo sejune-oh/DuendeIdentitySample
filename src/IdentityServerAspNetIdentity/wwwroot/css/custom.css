@@ -1,0 +1,93 @@
+﻿/* Common CSS*/
+
+.login_btn {
+    background: white;
+    padding: 1rem;
+    padding: 1rem;
+    text-align: start;
+    border-radius: 1rem;
+}
+
+
+/* Container */
+.login_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+
+/* form */
+.login_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px 14px;
+    gap: 2rem;
+}
+
+
+/* External and email sign in*/
+.login_external {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+
+/* External and email sign in*/
+.line_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 2rem;
+}
+
+
+.line {
+    width: 100%;
+    border: 1px solid black;
+    height: 1px;
+}
+
+.line_container > p {
+    line-height: 1rem;
+}
+/* Mobile input container*/
+.mobile_number_container {
+    width: 100%;
+}
+
+    .mobile_number_container > input {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: .5rem;
+    }
+
+/*Submit button*/
+
+.submit_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+    .submit_container > button {
+        background-color: black;
+        color: white;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+
+
+/* Media Query */
