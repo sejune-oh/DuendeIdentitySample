@@ -62,6 +62,12 @@ public class Index : PageModel
     {
         await BuildModelAsync(returnUrl);
 
+        if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            return Redirect("~/");
+        }
+
+
         if (View.IsExternalLoginOnly)
         {
             // we only have one option for logging in and it's an external provider
@@ -76,6 +82,10 @@ public class Index : PageModel
         // check if we are in the context of an authorization request
         var context = await _interaction.GetAuthorizationContextAsync("http://localhost:3000/api/auth/callback/cloudHospital");
 
+        if (Input.Button == "Mobile") {
+            return Redirect("~/MobileLogin"); 
+        }
+
         // the user clicked the "cancel" button
         if (Input.Button != "login")
         {
@@ -89,7 +99,7 @@ public class Index : PageModel
                 // this will send back an access denied OIDC error response to the client.
                 await _interaction.DenyAuthorizationAsync(context, AuthorizationError.AccessDenied);
 
-                // we can trust model.ReturnUrl since GetAuthorizationContextAsync returned non-null
+                // we can trust model.ReturnUrl sinc e GetAuthorizationContextAsync returned non-null
                 if (context.IsNativeClient())
                 {
                     // The client is native, so this change in how to
